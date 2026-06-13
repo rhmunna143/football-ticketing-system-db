@@ -207,3 +207,28 @@ FROM
     users
     INNER JOIN bookings USING (user_id)
     INNER JOIN matches USING (match_id);
+
+-- Query 5: Display a comprehensive list of all users and their booking IDs, 
+-- ensuring that fans who have never bought a ticket are still listed.
+SELECT
+    user_id,
+    full_name,
+    booking_id
+FROM
+    users
+    LEFT JOIN bookings USING (user_id);
+
+-- Query 6: Find all ticket bookings where the total cost is strictly higher than the average cost of all ticket bookings.
+SELECT
+    booking_id,
+    match_id,
+    total_cost
+FROM
+    bookings
+WHERE
+    total_cost > (
+        SELECT
+            AVG(total_cost)
+        FROM
+            bookings
+    );

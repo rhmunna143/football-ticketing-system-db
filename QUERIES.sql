@@ -232,3 +232,20 @@ WHERE
         FROM
             bookings
     );
+
+-- Query 7: Retrieve the top 2 most expensive matches sorted by base ticket price, skipping the absolute highest premium match.
+SELECT
+    match_id,
+    fixture,
+    base_ticket_price
+FROM
+    matches
+WHERE
+    base_ticket_price < (
+        SELECT
+            MAX(base_ticket_price) AS max_price
+        FROM
+            matches
+    )
+LIMIT
+    2;

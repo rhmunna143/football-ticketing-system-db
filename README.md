@@ -12,6 +12,7 @@ A relational database project modelling a three-table ticket booking system for 
 - [Sample Query Outputs](#sample-query-outputs)
 - [How to Run](#how-to-run)
 - [File Structure](#file-structure)
+- [Viva Recording](#viva-recording)
 
 ---
 
@@ -167,6 +168,16 @@ Average total cost across all bookings = **138**. Bookings with `total_cost > 13
 6. **Run the full file** — press `Ctrl+Shift+Enter` or click the **Run All** button to create tables, seed data, and execute all 7 queries
 
 7. **View results** in the Results panel at the bottom of the editor
+
+---
+
+## Viva Recording
+
+Theory questions answered on camera (Questions 1, 3 & 4) — Foreign Keys, Primary Keys & NULL, and LEFT JOIN behaviour.
+
+[![SQL Database Viva | Football Ticket Booking System](https://img.youtube.com/vi/LYA_vrx7AdI/maxresdefault.jpg)](https://youtu.be/LYA_vrx7AdI)
+
+> [Watch on YouTube →](https://youtu.be/LYA_vrx7AdI)
 
 ---
 
